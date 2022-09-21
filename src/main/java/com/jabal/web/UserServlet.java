@@ -16,7 +16,6 @@ import com.jabal.model.User;
 public class UserServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private USerDAO userDAO;
-
     public void init() {
         userDAO = new USerDAO();
     }
