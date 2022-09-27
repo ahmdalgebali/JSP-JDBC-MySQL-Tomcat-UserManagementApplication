@@ -1,7 +1,6 @@
 package com.jabal.model;
 
 public class User {
-
     protected int id;
     protected String name;
     protected String email;
@@ -57,4 +56,8 @@ public class User {
         this.country = country;
     }
 
+    @Override
+    public String toString() {
+        return "User [id=" + id + ",name=" + name + ",email=" + email + ", country=" + country + "]";
+    }
 }

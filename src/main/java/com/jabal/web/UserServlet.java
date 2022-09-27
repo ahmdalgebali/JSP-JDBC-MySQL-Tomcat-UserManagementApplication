@@ -9,15 +9,16 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import com.jabal.dao.USerDAO;
+
+import com.jabal.dao.USerDaoI;
 import com.jabal.model.User;
 
 @WebServlet("/")
 public class UserServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private USerDAO userDAO;
+    private USerDaoI userDAO;
     public void init() {
-        userDAO = new USerDAO();
+        userDAO = new USerDaoI();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -67,7 +68,7 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         User newUser = new User(name, email, country);
-        userDAO.insertUser(newUser);
+        userDAO.save(newUser);
         response.sendRedirect("list");
     }
 
@@ -96,7 +97,7 @@ public class UserServlet extends HttpServlet {
         String email = request.getParameter("email");
         String country = request.getParameter("country");
         User book = new User(id, name, email, country);
-        userDAO.updateUser(book);
+        userDAO.save(book);
         response.sendRedirect("list");
     }
 

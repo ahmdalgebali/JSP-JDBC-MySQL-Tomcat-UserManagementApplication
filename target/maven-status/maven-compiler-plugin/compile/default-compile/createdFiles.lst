@@ -1,0 +1,6 @@
+com\jabal\App.class
+com\jabal\dao\USerDaoI.class
+com\jabal\dao\DBConnection.class
+com\jabal\dao\UserDao.class
+com\jabal\web\UserServlet.class
+com\jabal\model\User.class
