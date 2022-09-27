@@ -14,7 +14,7 @@ public class App {
         user.setEmail("ahmedelgebaly44@gmail.com");
         //userDao.save(user);
         
-        
+        //Checking if gitignore works! #6 
         //System.out.println(userDao.selectUser(12));
         // for(int i=1; i<20;i++){userDao.deleteUser(i);}
         userDao.deleteUser(20);
